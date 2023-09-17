@@ -13,12 +13,11 @@
 
 ⚡ Fast - 🪶 Lightweight - 📋 Open Source
 
-miniLink is a fast, easy deployable URL shortener service. 
+miniLink is a fast, easily deployable URL shortener service. 
 
 miniLink is written in Go, using the Fiber framework for easy path parameters.
 The front end is written in Svelte and Tailwind.
 It uses MongoDB to store the different shortened links. 
-miniLink uses Cloudflared to expose the app
 
 [Preview Service](#preview-service) 
 •
@@ -53,6 +52,9 @@ miniLink can be self-hosted in x easy steps:
 
 4. **Run the project**
    Lastly, you can run `docker compose up` to start the project. The first time it will take a minute or so to build.
+
+
+Note: miniLink uses Cloudflared to expose the app - this isn't required, but it was the easiest way for me to deploy it.
 
 
 If you'd like to, feel free to check out some of my other projects. <3
