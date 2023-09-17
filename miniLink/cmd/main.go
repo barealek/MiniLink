@@ -5,6 +5,7 @@ import (
 	"os"
 	"time"
 
+	"github.com/barealek/minilink/internal/controllers"
 	"github.com/barealek/minilink/internal/database"
 	"github.com/barealek/minilink/pkg/shutdown"
 
@@ -65,7 +66,7 @@ func buildMiniLink() (*fiber.App, func(), error) {
 		JSONDecoder: gojson.Unmarshal,
 	})
 
-	// controllers.RegisterGroups(app)
+	controllers.RegisterGroups(app)
 
 	return app, func() {
 		database.CloseMongo(db)
