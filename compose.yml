@@ -1,0 +1,10 @@
+version: '3.9'
+name: minilink
+services:
+  minilink:
+    build:
+      context: miniLink
+    ports:
+      - "3000:3000"
+    environment:
+      - MONGO_CONN_URI
