@@ -11,6 +11,9 @@ import (
 
 	gojson "github.com/goccy/go-json"
 	"github.com/gofiber/fiber/v2"
+	"github.com/gofiber/fiber/v2/middleware/cors"
+	"github.com/gofiber/fiber/v2/middleware/logger"
+	"github.com/gofiber/fiber/v2/middleware/recover"
 )
 
 func main() {
@@ -67,6 +70,15 @@ func buildMiniLink() (*fiber.App, func(), error) {
 	})
 
 	controllers.RegisterGroups(app)
+
+	app.Use(logger.New())
+
+	app.Use(recover.New())
+
+	app.Use(cors.New(cors.Config{
+		AllowOrigins: "*",
+		AllowHeaders: "Origin, Content-Type, Accept",
+	}))
 
 	return app, func() {
 		database.CloseMongo(db)
