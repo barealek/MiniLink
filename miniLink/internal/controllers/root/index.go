@@ -5,5 +5,10 @@ import (
 )
 
 func index(c *fiber.Ctx) error {
-	return c.SendString("Hello, World!")
+	return c.JSON(fiber.Map{
+		"Name":        "MiniLink",
+		"Author":      "Aleksander (barealek)",
+		"Github":      "github.com/barealek/minilink",
+		"VersionType": "Alpha",
+	})
 }
