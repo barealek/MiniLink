@@ -4,7 +4,7 @@ import (
 	"github.com/gofiber/fiber/v2"
 )
 
-func RegisterControllers(app *fiber.App) {
+func RegisterControllers(app fiber.Router) {
 	root := app.Group("/")
 	root.Get("/", index)
 }
