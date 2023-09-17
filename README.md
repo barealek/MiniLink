@@ -23,8 +23,6 @@ miniLink uses Cloudflared to expose the app
 [Preview Service](#preview-service) 
 •
 [Installation](#installation) 
-•
-[Configuration](#configuration)
 
 </div>
 
@@ -51,32 +49,10 @@ miniLink can be self-hosted in x easy steps:
 
 3. **Set up environment variables**
 
-   miniLink requires a few environment variables to work. This includes the database connection string, (optionally) cloudflare tunnel
+   miniLink requires a few environment variables to work. This includes the database connection string, and (optionally) cloudflare tunnel token.
+
+4. **Run the project**
+   Lastly, you can run `docker compose up` to start the project. The first time it will take a minute or so to build.
 
 
-## Configuration
-
-### Flags
-
-When calling `zoxide init`, the following flags are available:
-
-- `--cmd`
-  - Changes the prefix of the `z` and `zi` commands.
-  - `--cmd j` would change the commands to (`j`, `ji`).
-  - `--cmd cd` would replace the `cd` command (doesn't work on Nushell / POSIX shells).
-- `--hook <HOOK>`
-  - Changes how often zoxide increments a directory's score:
-    | Hook     | Description                       |
-    | -------- | --------------------------------- |
-    | `none`   | Never                             |
-    | `prompt` | At every shell prompt             |
-    | `pwd`    | Whenever the directory is changed |
-- `--no-cmd`
-  - Prevents zoxide from defining the `z` and `zi` commands.
-  - These functions will still be available in your shell as `__zoxide_z` and
-    `__zoxide_zi`, should you choose to redefine them.
-
-### Environment variables
-
-Environment variables[^2] can be used for configuration. They must be set before
-`zoxide init` is called.
+If you'd like to, feel free to check out some of my other projects. <3
