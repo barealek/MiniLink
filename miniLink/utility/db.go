@@ -36,3 +36,20 @@ func GetMini(id uint64) models.Mini {
 
 	return mini
 }
+
+func CreateMini(url string) (models.Mini, error) {
+	mini := models.Mini{
+		Redirect: url,
+	}
+
+	coll := database.GetMongo().Collection("minis")
+
+	_, err := coll.InsertOne(context.TODO(), bson.D{
+		{Key: "url", Value: mini.Redirect},
+	})
+	if err != nil {
+		return models.Mini{}, err
+	}
+
+	return mini, nil
+}
