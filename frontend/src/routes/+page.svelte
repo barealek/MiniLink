@@ -9,7 +9,7 @@
     let data = {}
 
     async function createMiniLink (targetUrl) {
-		const res = await fetch('/api/mini/create', {
+		const res = await fetch('/a/mini/create', {
 			method: 'POST',
             headers: {
                 'Content-Type': 'application/json'
@@ -112,7 +112,7 @@
                   </div>
                   <div class="flex-1">
                     <h3 class="text-lg font-medium text-gray-100">miniLink created!</h3>
-                    <div class="mt-2 text-sm text-gray-100">The miniLink was successfully created. Head over to {"https://minilink.imalek.me/" + data.minilink}</div>
+                    <div class="mt-2 text-sm text-gray-100">The miniLink was successfully created. Head over to {"https://minilink.imalek.me/a/" + data.minilink}</div>
                   </div>
                 </div>
                 <div class="mt-6 flex justify-end gap-3">
