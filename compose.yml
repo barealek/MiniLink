@@ -17,10 +17,18 @@ services:
   proxy:
     image: caddy:2.7.4-alpine
     restart: unless-stopped
-    ports:
-      - "80:80"
     volumes:
       - ./proxy/Caddyfile:/etc/caddy/Caddyfile
     depends_on:
       - minilink
       - frontend
+
+  # This configuration uses Cloudflared Tunnels to expose the program to the internet without me port forwarding. You can remove this if you'd like.
+  cloudflare-tunnel:
+    image: cloudflare/cloudflared:latest
+    restart: unless-stopped
+    command: tunnel run
+    environment:
+      - TUNNEL_TOKEN
+    depends_on:
+      - proxy
