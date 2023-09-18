@@ -8,7 +8,7 @@ func RegisterControllers(app fiber.Router) {
 		return c.SendString("This endpoint is for managing minilinks.")
 	})
 
-	app.Get("/:mini", getMiniData)
+	app.Get("/get/:mini", getMiniData)
 	app.Get("/all", getAllMinis)
 
 	app.Post("/create", createMiniLink)
