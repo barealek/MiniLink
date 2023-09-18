@@ -8,6 +8,7 @@ import (
 )
 
 func RegisterGroups(app *fiber.App) {
-	root.RegisterControllers(app.Group("/"))
-	minis.RegisterControllers(app.Group("/mini"))
+	api := app.Group("/api")
+	root.RegisterControllers(api)
+	minis.RegisterControllers(api.Group("/mini"))
 }

@@ -4,7 +4,23 @@ services:
   minilink:
     build:
       context: miniLink
-    ports:
-      - "3000:3000"
     environment:
       - MONGO_CONN_URI
+
+  frontend:
+    build:
+      context: ./frontend
+
+    restart: unless-stopped
+
+  # Connectors
+  proxy:
+    image: caddy:2.7.4-alpine
+    restart: unless-stopped
+    ports:
+      - "80:80"
+    volumes:
+      - ./proxy/Caddyfile:/etc/caddy/Caddyfile
+    depends_on:
+      - minilink
+      - frontend
