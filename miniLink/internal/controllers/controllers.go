@@ -9,5 +9,5 @@ import (
 
 func RegisterGroups(app *fiber.App) {
 	root.RegisterControllers(app.Group("/"))
-	minis.RegisterControllers(app.Group("/minis"))
+	minis.RegisterControllers(app.Group("/mini"))
 }
