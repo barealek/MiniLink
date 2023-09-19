@@ -18,6 +18,11 @@ func createMiniLink(c *fiber.Ctx) error {
 		return c.Status(fiber.StatusBadRequest).SendString("Missing body parameter. Check the docs for more info.")
 	}
 
+	// sanitize url
+	if !utility.SanitizeURL(createMiniLinkBody.Url) {
+		return c.Status(fiber.StatusBadRequest).SendString("Invalid url.")
+	}
+
 	// create minilink
 	miniLink, err := utility.CreateMini(createMiniLinkBody.Url)
 	if err != nil {
