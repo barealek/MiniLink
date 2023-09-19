@@ -4,6 +4,7 @@ services:
   minilink:
     build:
       context: miniLink
+    restart: unless-stopped
     environment:
       - MONGO_CONN_URI
 
