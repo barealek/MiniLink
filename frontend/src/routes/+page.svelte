@@ -29,7 +29,7 @@
 
 <section class="bg-gray-900 text-white">
   <p class="absolute bottom-10 left-1/2 transform -translate-x-1/2 text-center">
-    This page is very buggy yes - I'm not a front-end developer.<br/>If you don't write a valid URL, nothing will happen.
+    This UI is very buggy, yes - I'm not a front-end developer.<br/>If you don't write a valid URL, nothing will happen.
   </p>
   <div
     class="mx-auto max-w-screen-xl px-4 py-32 lg:flex lg:h-screen lg:items-center"
