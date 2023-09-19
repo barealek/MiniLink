@@ -38,7 +38,7 @@
       <h1
         class="bg-gradient-to-r from-green-300 via-blue-500 to-purple-600 bg-clip-text text-3xl font-extrabold text-transparent sm:text-5xl"
       >
-        miniLink - Easy link shortener.
+        miniLink - Simple link shortener.
 
         <span class="sm:block">Written with speed in mind.</span>
       </h1>
