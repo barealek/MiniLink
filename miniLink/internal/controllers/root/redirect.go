@@ -10,7 +10,7 @@ func redirectToMini(c *fiber.Ctx) error {
 
 	mini, err := utility.GetMini(miniId)
 	if err != nil {
-		return c.Status(fiber.StatusNotFound).SendString(err.Error())
+		return c.Status(fiber.StatusNotFound).SendString("That minlink wasn't found.")
 	}
 
 	go utility.IncrementClicks(miniId)
