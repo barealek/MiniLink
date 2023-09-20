@@ -9,7 +9,7 @@
 
 <div align="center">
 
-# miniLink
+# miniLink🔗
 
 ⚡ Fast - 🪶 Lightweight - 📋 Open Source
 
