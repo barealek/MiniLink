@@ -27,7 +27,7 @@ It uses MongoDB to store the different shortened links.
 
 ## Preview Service
 
-If you would like to try the project without self-hosting it, head over to [minilink.imalek.me](https://minilink.imalek.me).
+If you would like to try the project without self-hosting it, head over to [minilink.imalek.me](https://minilink.imalek.me). The site might not always be online.
 
 
 ## Installation
